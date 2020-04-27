@@ -25,7 +25,7 @@ class TestingConfig(Config):
 
 
 def get_config(config: str) -> Type[Config]:
-    """ Returns a config class, defaults to ProductionConfig
+    """ Returns a Config class, defaults to ProductionConfig
 
     Args:
         config (str): The name of the config to return (production|development|testing)
