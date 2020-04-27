@@ -1,5 +1,6 @@
 import os
 from datetime import timedelta
+from typing import Type
 
 
 class Config(object):
@@ -23,7 +24,7 @@ class TestingConfig(Config):
     SESSION_COOKIE_SECURE = False
 
 
-def get_config(config: str):
+def get_config(config: str) -> Type[Config]:
     """ Returns a config class, defaults to ProductionConfig
 
     Args:

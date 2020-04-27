@@ -1,4 +1,5 @@
 from app import create_app
+
 import os
 
 flask_env = os.getenv("FLASK_ENV")
