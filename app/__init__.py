@@ -10,11 +10,9 @@ def create_app(env: str) -> Flask:
     """ Application factory """
 
     app = Flask(__name__)
-    cfg: Type[Config] = get_config(env)
+    conf: Type[Config] = get_config(env)
 
-    app.config.from_object(cfg)
-    app.logger.info(f"{cfg.__name__} loaded")
-
+    app.config.from_object(conf)
     app.register_blueprint(view)
 
     return app
